@@ -45,7 +45,20 @@ client.on('message', message =>{
         client.commands.get('name').execute(message, args);
     } else if (command === 'whatismyavatar'){
         client.commands.get('avatar').execute(message, args);
-    }
+    } else if (command === 'servers'){
+        let serverlist = ''
+        bot.guilds.cache.forEach((guild) => {
+            serverlist = serverlist.concat(" - " + guild.name + ": ID: " + guild.id + "\n")
+        })
+    
+        const embed = new MessageEmbed()
+        .setColor("RANDOM")
+        .setTitle("Servers that have TheCoolBot", '')
+        .setDescription(serverlist)
+        message.channel.send({embed});
+
+}
+    }           
 })
 
 client.login(process.env.token)
