@@ -65,7 +65,7 @@ client.on('message', message =>{
     } else if (command === 'discord'){
         const attachment = new MessageAttachment('https://i.imgur.com/ZOKp8LH.png');
     // Send the attachment in the message channel
-    message.channel.send(attachment);
+        message.channel.send(`${message.author},`, attachment);
     }    
 
     
