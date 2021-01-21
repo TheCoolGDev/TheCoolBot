@@ -51,7 +51,7 @@ client.on('message', message =>{
             serverlist = serverlist.concat(" - " + guild.name + ": ID: " + guild.id + "\n")
         })
     
-        const embed = new MessageEmbed()
+        const embed = new Discord.MessageEmbed()
         .setColor("RANDOM")
         .setTitle("Servers that have TheCoolBot™", '')
         .setDescription(serverlist)
