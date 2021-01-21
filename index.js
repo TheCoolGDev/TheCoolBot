@@ -62,7 +62,14 @@ client.on('message', message =>{
         client.commands.get('pinged').execute(message, args);
     } else if (command === 'rule'){
         client.commands.get('rules').execute(message, args);
-    }       
+    } else if (command === 'discord'){
+        const attachment = new MessageAttachment('https://i.imgur.com/ZOKp8LH.png');
+    // Send the attachment in the message channel
+    message.channel.send(attachment);
+    }    
+
+    
+  }
 })
 
 client.login(process.env.token)
