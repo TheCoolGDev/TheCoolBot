@@ -7,7 +7,7 @@ module.exports = {
         if (!rule || rule < 1 || rule > 6) return message.reply('please provide a rule number between 1 and 6.');
         
         if (rule) {
-          const adChannel = message.guilds.channels.find(ch => ch.name.includes('🎫┃advertise'));
+          const adChannel = message.guilds.channels.cache.find(ch => ch.name.includes('🎫┃advertise'));
             
           if (rule === 1) return message.channel.send('We DO NOT tolerate any form of harassment, offensive language, threats, spam, personal attacks, racism, sexual content or anything else that does not follow the Discord community guidelines or TOS.');
           
