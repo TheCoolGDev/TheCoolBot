@@ -48,7 +48,7 @@ client.on('message', message =>{
     } else if (command === 'servers'){
         let serverlist = ''
         client.guilds.cache.forEach((guild) => {
-            serverlist = serverlist.concat(" - " + guild.name + ": ID: " + guild.id + "\n")
+            serverlist = serverlist.concat(" - " + guild.name)
         })
     
         const embed = new Discord.MessageEmbed()
