@@ -80,6 +80,8 @@ client.on('message', message =>{
         const attachment = new MessageAttachment('https://i.imgur.com/wD2FzDh.gif');
     // Send the attachment in the message channel
         message.channel.send(`${message.author},`, attachment);
+    }  else if (command === 'Hello'){
+        client.commands.get('hello').execute(message, args);
     }
 
     
