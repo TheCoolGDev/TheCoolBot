@@ -49,7 +49,7 @@ client.on('message', message =>{
         let serverlist = ''
         bot.guilds.cache.forEach((guild) => {
             serverlist = serverlist.concat(" - " + guild.name + ": ID: " + guild.id + "\n")
-        })
+        }
     
         const embed = new MessageEmbed()
         .setColor("RANDOM")
