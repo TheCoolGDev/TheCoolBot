@@ -49,15 +49,15 @@ client.on('message', message =>{
         let serverlist = ''
         bot.guilds.cache.forEach((guild) => {
             serverlist = serverlist.concat(" - " + guild.name + ": ID: " + guild.id + "\n")
-        }
+        })
     
         const embed = new MessageEmbed()
         .setColor("RANDOM")
-        .setTitle("Servers that have TheCoolBot", '')
+        .setTitle("Servers that have Naruse Jun Bot", '')
         .setDescription(serverlist)
         message.channel.send({embed});
 
-}
+     }
     }           
 })
 
