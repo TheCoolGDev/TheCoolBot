@@ -60,6 +60,8 @@ client.on('message', message =>{
      
     } else if (command === 'ping'){
         client.commands.get('pinged').execute(message, args);
+    } else if (command === 'rule'){
+        client.commands.get('rules').execute(message, args);
     }       
 })
 
