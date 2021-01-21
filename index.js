@@ -58,7 +58,9 @@ client.on('message', message =>{
         message.channel.send({embed});
 
      
-    }           
+    } else if (command === 'ping'){
+        client.commands.get('pinged').execute(message, args);
+    }       
 })
 
 client.login(process.env.token)
