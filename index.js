@@ -57,7 +57,7 @@ client.on('message', message =>{
         .setDescription(serverlist)
         message.channel.send({embed});
 
-     }
+     
     }           
 })
 
