@@ -86,15 +86,7 @@ client.on('message', message =>{
         client.commands.get('hello').execute(message, args);
     } 
     
-    const thisWord = "Something";
-if(message.content.includes(thisWord))
-{
-    bot.sendMessage({
-        to: channelID,
-        message: "Your reply."
-    })
-}
-
+   
     
   
 })
