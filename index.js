@@ -82,7 +82,18 @@ client.on('message', message =>{
         message.channel.send(`${message.author},`, attachment);
     }  else if (command === 'Hello'){
         client.commands.get('hello').execute(message, args);
-    }
+    }  else if (command === 'Hello'){
+        client.commands.get('hello').execute(message, args);
+    } 
+    
+    const thisWord = "Something";
+if(message.content.includes(thisWord))
+{
+    bot.sendMessage({
+        to: channelID,
+        message: "Your reply."
+    })
+}
 
     
   
