@@ -84,7 +84,19 @@ client.on('message', message =>{
         client.commands.get('hello').execute(message, args);
     }  else if (command === 'Hello'){
         client.commands.get('hello').execute(message, args);
-    } 
+    }  else if (command === 'poll'){
+        let pollChannel = message.mentions.channels.first();
+        let pollDescription = args.slice(1).join(' ');
+
+        let embedPoll = new Discord.MessageEmbed()
+        .setTitle('😲 New Poll! 😲')
+        .setDescription(pollDescription)
+        .setColor('YELLOW')
+        let msgEmbed = await pollChannel.send(embedPoll);
+        await msgEmbed.react('👍')
+        await msgEmbed.react('👎')
+    }
+    }  
     
    
     
