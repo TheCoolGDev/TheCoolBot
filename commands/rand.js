@@ -4,7 +4,7 @@ module.exports = {
   execute(message, args, Discord) {
 
     if (!args.length || !args[1]) {
-      message.channel.send("You need to type in the min and max values like this \`!rand 10 5\`")
+      message.channel.send("You need to type in the min and max values like this \`.randnum 10 5\`")
     }
 
     else {
@@ -14,14 +14,14 @@ module.exports = {
 
     let randNo = Math.round(Math.random() * max + min)
 
-    const embed = new Discord.MessageEmbed()
+    const coolembed = new Discord.MessageEmbed()
     .setTitle("Your random number is: ")
     .setDescription(randNo)
     .setColor("YELLOW")
     .setFooter("Random Number Generator")
     .setTimestamp()
 
-    message.reply(embed)
+    message.reply(coolembed)
 
     }
 
