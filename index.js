@@ -96,11 +96,6 @@ client.on('message', async message =>{
         await msgEmbed.react('👍')
         await msgEmbed.react('👎')
     }
-    }  
-    
-   
-    
-  
 })
 
 client.login(process.env.token)
