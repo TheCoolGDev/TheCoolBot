@@ -95,8 +95,8 @@ client.on('message', async message =>{
         let msgEmbed = await pollChannel.send(embedPoll);
         await msgEmbed.react('👍')
         await msgEmbed.react('👎')
-    }  else if (command === 'randnum'){
-        client.commands.get('rand').execute(message, args);
+    }  else if (command === 'ask'){
+        client.commands.get('qa').execute(message, args);
     } 
 })
 
