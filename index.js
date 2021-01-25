@@ -4,7 +4,7 @@ const client = new Discord.Client();
 
 const { Client, MessageAttachment } = require('discord.js');
 
-const prefix = '.';
+const prefix = 'cool.';
 
 const fs = require('fs');
 
